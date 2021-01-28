@@ -1,7 +1,7 @@
 """ 
 Weston Simon
 1/28/21
-combo menue
+combo menu
 """
 Sandwich = input("Do you want a Sandwich? ")
 if Sandwich == "Yes":
