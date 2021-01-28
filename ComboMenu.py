@@ -6,7 +6,7 @@ combo menu
 
 while(True):
     restart = (False)
-    #When the counstomer inputs an invalid order it restarts that part of the order
+    #When the customer inputs an invalid order it restarts that part of the order
 
     Sandwich = input("Do you want a Sandwich? ")
     if Sandwich == "Yes":
@@ -34,23 +34,23 @@ while(True):
     else:
         print("invalid sandwich selection please restart the program and try again with one of the three sandwich types: Chicken, Beef, Tofu")
         restart = (True)
-    #When the counstomer inputs an invalid order it restarts that part of the order
+    #When the customer inputs an invalid order it restarts that part of the order
     if (restart == True):
         continue
     else:
         break
-    #When the counstomer inputs an invalid order it restarts that part of the order
+    #When the customer inputs an invalid order it restarts that part of the order
     #End of sandwich order
 
 while(True):       
     restart = (False)
-    #When the counstomer inputs an invalid order it restarts that part of the order
+    #When the customer inputs an invalid order it restarts that part of the order
 
     Drink = input("Would you like a drink? ")
     #ask coustomer if they want a drink
 
     if Drink == "No":
-        print("No drink selected proceding to checkout ")
+        print("No drink selected preceding to checkout ")
         DrinkSize = str("None")
    
     elif Drink == "Yes":
@@ -74,23 +74,23 @@ while(True):
     else:
         print("Invalid drink option please enter a valid drink option")
         restart = True
-    #When the counstomer inputs an invalid order it restarts that part of the order
+    #When the customer inputs an invalid order it restarts that part of the order
     if (restart == True):
         continue
     else:
         break
-    #When the counstomer inputs an invalid order it restarts that part of the order
+    #When the customer inputs an invalid order it restarts that part of the order
 
 while(True):
     restart = (False)
-    #When the counstomer inputs an invalid order it restarts that part of the order
+    #When the customer inputs an invalid order it restarts that part of the order
     Fries = input("Would you like French Fries? ")
     #ask if the coustomer wants fries
     if Fries == "Yes":
         FriesSize = input("What size of French Fries do you want? ")
     
     elif Fries == "No":
-        print("No fries sellected proceding to checkout.")
+        print("No fries selected preceding to checkout.")
         FriesSize = str("none")
     #Prosesses the response for if the coustomer wants fries
     if FriesSize == "Small":
@@ -115,12 +115,12 @@ while(True):
     else:
         print("Invalid fries option please inter a valid option")
         restart = (True)
-         #When the counstomer inputs an invalid order it restarts that part of the order  
+         #When the customer inputs an invalid order it restarts that part of the order  
     if (restart == True):
         continue
     else:
         break
-     #When the counstomer inputs an invalid order it restarts that part of the order
+     #When the customer inputs an invalid order it restarts that part of the order
 
 Ketchup = int(input("How many ketchup packets would you like? "))
 TotalKetchup = float(Ketchup * 0.25)
