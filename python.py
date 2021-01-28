@@ -27,9 +27,25 @@ Drink = input("Would you like a drink? ")
 
 if Drink == "No":
     print("No drink selected proceding to checkout ")
-    DrinkPrice = int(0)
+    DrinkSize = str("None")
 
 elif Drink == "Yes":
     DrinkSize = input("What size drink would you like? ")
 
-    
+if DrinkSize == "Small":
+    print("Small $1.00")
+    DrinkPrice = float(1.00)
+
+elif DrinkSize == "Medium":
+    print("Medium $1.75")
+    DrinkPrice = float(1.75)
+
+elif DrinkSize == "Large":
+    print("Large $2.25")
+    DrinkPrice = float(1.75)
+
+elif DrinkSize == ("None"):
+    DrinkPrice = float(0)
+
+Checkout = float(meal_price + DrinkPrice)
+print("Total= $"+str(Checkout))
