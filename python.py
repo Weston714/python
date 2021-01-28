@@ -47,7 +47,7 @@ elif DrinkSize == "Medium":
 
 elif DrinkSize == "Large":
     print("Large $2.25")
-    DrinkPrice = float(1.75)
+    DrinkPrice = float(2.25)
 
 elif DrinkSize == ("None"):
     DrinkPrice = float(0)
@@ -77,19 +77,19 @@ elif FriesSize == "Large":
 elif FriesSize == "none":
     FriesPrice = float(0) 
 
-Ketchup = int(input("How many ketchup packets would you like?"))
+Ketchup = int(input("How many ketchup packets would you like? "))
 TotalKetchup = float(Ketchup * 0.25)
 
 if Sandwich == Drink == Fries == "Yes":
     print("You recive our $1.00 discount for ordering a sandwich with fries and a drink.")
-    Discount = float(1.00)
+    Discount = float(-1.00)
     DiscountRecived = (True)
 else:
     Discount = float(0)
     DiscountRecived = (False)
 
-Items = (Sandwich_type + DrinkSize + FriesSize + Ketchup)
+Items = str("Sandwich: " + Sandwich_type + "   Drink: " + DrinkSize + "   Fries: " + FriesSize + "    Number of ketchup packets: " +str(Ketchup))
 print(Items)
 
-Checkout = float(meal_price + DrinkPrice + FriesPrice + TotalKetchup)
+Checkout = float(meal_price + DrinkPrice + FriesPrice + TotalKetchup + Discount)
 print("Total= $"+str(Checkout))
