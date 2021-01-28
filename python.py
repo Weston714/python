@@ -8,7 +8,7 @@ combo menu
 Sandwich = input("Do you want a Sandwich? ")
 if Sandwich == "Yes":
     Sandwich_type = input("What type of sandwich do you want? ")
-    
+
 elif Sandwich == "No":
     Sandwich_type == "None"
 
@@ -61,6 +61,7 @@ Fries = input("Would you like French Fries? ")
 
 if Fries == "Yes":
     FriesSize = input("What size of French Fries do you want? ")
+
 elif Fries == "No":
     print("No fries sellected proceding to checkout.")
     FriesSize = str("none")
@@ -69,6 +70,7 @@ if FriesSize == "Small":
     print("Small fries $1.00")
     FriesPrice = float(1.00)
     MegaFries = input("Would you like to mega size your Fries? ")
+
     if MegaFries == "Yes":
         FriesPrice = float(2.00)
 
@@ -79,6 +81,7 @@ elif FriesSize == "Medium":
 elif FriesSize == "Large":
     print("Large Fries: $2.00")
     FriesPrice = float(2.00)
+
 elif FriesSize == "none":
     FriesPrice = float(0) 
 
@@ -89,6 +92,7 @@ if Sandwich == Drink == Fries == "Yes":
     print("You recive our $1.00 discount for ordering a sandwich with fries and a drink.")
     Discount = float(-1.00)
     DiscountRecived = (True)
+    
 else:
     Discount = float(0)
     DiscountRecived = (False)
