@@ -1,19 +1,23 @@
+from colorama import Fore, Back, Style
 """ 
 Weston Simon
 1/28/21
 combo menu
 """
-
+print(Fore.CYAN + "Menu:\n Sandwiches: chicken $5.25, beef $6.25, tofu $5.75\n Drinks: small $1.00 medium $1.75 large $2.25\n Fries: small $1.00(Mega size: $2.00) medium $1.50 large $2.00\n Ketchup: $0.25 per packet\n Combo discont $1.00 if you buy a sandwich fries and a drink.")
+print(Style.RESET_ALL)
 while(True):
     restart = (False)
     #When the customer inputs an invalid order it restarts that part of the order
 
-    Sandwich = input("Do you want a Sandwich? ")
+    Sandwich = input(Fore.GREEN + "Do you want a Sandwich? ")
+    
     if Sandwich == "Yes":
         Sandwich_type = input("What type of sandwich do you want? ")
     
     elif Sandwich == "No":
-        Sandwich_type == "None"
+        Sandwich_type = "None"
+        print("No sandwich selected")
     #Asks if the coustomer wants a sandwich
 
     if Sandwich_type == "Chicken":
@@ -32,7 +36,8 @@ while(True):
         meal_price = float(0)
     #If the coustomer dosn't want a sandwich
     else:
-        print("invalid sandwich selection please restart the program and try again with one of the three sandwich types: Chicken, Beef, Tofu")
+        print(Fore.RED + "invalid sandwich selection please select one of the three sandwich types: Chicken, Beef, Tofu")
+        print(Style.RESET_ALL)
         restart = (True)
     #When the customer inputs an invalid order it restarts that part of the order
     if (restart == True):
@@ -46,11 +51,11 @@ while(True):
     restart = (False)
     #When the customer inputs an invalid order it restarts that part of the order
 
-    Drink = input("Would you like a drink? ")
+    Drink = input(Fore.GREEN + "Would you like a drink? ")
     #ask coustomer if they want a drink
 
     if Drink == "No":
-        print("No drink selected preceding to checkout ")
+        print("No drink selected")
         DrinkSize = str("None")
    
     elif Drink == "Yes":
@@ -72,7 +77,8 @@ while(True):
         DrinkPrice = float(0)
     #If the coustomer dosn't want a drink
     else:
-        print("Invalid drink option please enter a valid drink option")
+        print(Fore.RED + "Invalid drink option please enter a valid drink option")
+        print(Style.RESET_ALL)
         restart = True
     #When the customer inputs an invalid order it restarts that part of the order
     if (restart == True):
@@ -84,13 +90,13 @@ while(True):
 while(True):
     restart = (False)
     #When the customer inputs an invalid order it restarts that part of the order
-    Fries = input("Would you like French Fries? ")
+    Fries = input(Fore.GREEN + "Would you like French Fries? ")
     #ask if the coustomer wants fries
     if Fries == "Yes":
         FriesSize = input("What size of French Fries do you want? ")
     
     elif Fries == "No":
-        print("No fries selected preceding to checkout.")
+        print("No fries selected")
         FriesSize = str("none")
     #Prosesses the response for if the coustomer wants fries
     if FriesSize == "Small":
@@ -100,6 +106,7 @@ while(True):
         #fries size small
         if MegaFries == "Yes":
             FriesPrice = float(2.00)
+            FriesSize = ("MEGA")
         #if they want mega fries
     elif FriesSize == "Medium":
         print("Medium Fries: $1.50")
@@ -113,7 +120,8 @@ while(True):
         FriesPrice = float(0) 
         #if the coustomer dosen't want fries
     else:
-        print("Invalid fries option please inter a valid option")
+        print(Fore.RED + "Invalid fries option please inter a valid option")
+        print(Style.RESET_ALL)
         restart = (True)
          #When the customer inputs an invalid order it restarts that part of the order  
     if (restart == True):
