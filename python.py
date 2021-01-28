@@ -1,11 +1,14 @@
 """ 
 Weston Simon
 1/28/21
-combo menue
+combo menu
 """
+
+
 Sandwich = input("Do you want a Sandwich? ")
 if Sandwich == "Yes":
     Sandwich_type = input("What type of sandwich do you want? ")
+    
 elif Sandwich == "No":
     Sandwich_type == "None"
 
@@ -20,11 +23,13 @@ elif Sandwich_type == "Beef":
 elif Sandwich_type == "Tofu":
     print("Tofu $5.25")
     meal_price = float(5.25)
+
 elif Sandwich_type == "None":
     meal_price = float(0)
 
 else:
     print("invalid sandwich selection please restart the program and try again with one of the three sandwich types: Chicken, Beef, Tofu")
+  
 
     
 
