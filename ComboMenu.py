@@ -4,7 +4,7 @@ Weston Simon
 1/28/21
 combo menu
 """
-print(Fore.CYAN + "Menu:\n Sandwiches: chicken $5.25, beef $6.25, tofu $5.75\n Drinks: small $1.00 medium $1.75 large $2.25\n Fries: small $1.00(Mega size: $2.00) medium $1.50 large $2.00\n Ketchup: $0.25 per packet\n Combo discont $1.00 if you buy a sandwich fries and a drink.")
+print(Fore.CYAN + "Menu:\n Sandwiches: chicken $5.25, beef $6.25, tofu $5.75\n Drinks: small $1.00 medium $1.75 large $2.25\n Fries: small $1.00(Mega size: $2.00) medium $1.50 large $2.00\n Ketchup: $0.25 per packet\n Combo discont $1.00 if you buy a sandwich fries and a drink.\n All selections Must be answered with:\n Yes/No Small,Medium,Large")
 print(Style.RESET_ALL)
 while(True):
     restart = (False)
@@ -12,7 +12,7 @@ while(True):
 
     Sandwich = input(Fore.GREEN + "Do you want a Sandwich? ")
     
-    if Sandwich == "Yes":
+    if Sandwich == "Yes" or "yes":
         Sandwich_type = input("What type of sandwich do you want? ")
     
     elif Sandwich == "No":
