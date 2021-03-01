@@ -3,6 +3,8 @@ Weston Simon
 1/28/21
 combo menu list
 """
+Selections = ["","","",]
+Items = []
 print("Menu:\n Sandwiches: chicken $5.25, beef $6.25, tofu $5.75\n Drinks: small $1.00 medium $1.75 large $2.25\n Fries: small $1.00(Mega size: $2.00) medium $1.50 large $2.00\n Ketchup: $0.25 per packet\n Combo discont $1.00 if you buy a sandwich fries and a drink.\n All selections Must be answered with:\n Yes/No Small,Medium,Large")
 while(True):
     restart = (False)
@@ -12,10 +14,12 @@ while(True):
     Sandwich = Sandwich.lower()
     
     if Sandwich == "yes":
+        Selections[0] = 'Yes'
         Sandwich_type = input("What type of sandwich do you want? ")
         Sandwich_type = Sandwich_type.lower()
     
     elif Sandwich == "no":
+        Selections[0] = 'No'
         Sandwich_type = "None"
         print("No sandwich selected")
     #Asks if the coustomer wants a sandwich
@@ -57,8 +61,10 @@ while(True):
     if Drink == "no":
         print("No drink selected")
         DrinkSize = str("None")
+        Selections[1] = 'No'
    
     elif Drink == "yes":
+        Selections[1] = 'Yes'
         DrinkSize = input("What size drink would you like? ") 
         DrinkSize = DrinkSize.lower()
     #prosecesses if the coustomer wants a drink
@@ -94,10 +100,12 @@ while(True):
     Fries = Fries.lower()
     #ask if the coustomer wants fries
     if Fries == "yes":
+        Selections[2] = 'Yes'
         FriesSize = input("What size of French Fries do you want? ")
         #FriesSize = FriesSize.lower()
     
     elif Fries == "no":
+        Selections[2] = 'No'
         print("No fries selected")
         FriesSize = str("none")
     #Prosesses the response for if the coustomer wants fries
@@ -130,19 +138,21 @@ while(True):
     else:
         break
      #When the customer inputs an invalid order it restarts that part of the order
-
+print(Selections)
 Ketchup = int(input("How many ketchup packets would you like? "))
 TotalKetchup = float(Ketchup * 0.25)
 #ask if the coustomer wants ketchup and calcualtes the price 
-if Sandwich == Drink == Fries == "Yes":
+if Selections == ['Yes', 'Yes', 'Yes']:
     print("You recive our $1.00 discount for ordering a sandwich with fries and a drink.")
     Discount = float(-1.00)
     DiscountRecived = (True)
+    print("Recived")
     
 else:
     Discount = float(0)
     DiscountRecived = (False)
     #To tell if the discount will be aplied or not
+    print("Not")
 Items = str("Sandwich: " + Sandwich_type + "   Drink: " + DrinkSize + "   Fries: " + FriesSize + "    Number of ketchup packets: " +str(Ketchup))
 print(Items)
 #list all of the items selected
