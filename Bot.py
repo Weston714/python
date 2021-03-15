@@ -13,4 +13,4 @@ async def on_ready():
     print('Ready!')
 
     
-bot.run('ODE2MzIyNDQzNjIxODI2NjMw.YD5RhQ.zxLF8kCOIo5XIJZso4IzAXSGYfE')
+bot.run()
