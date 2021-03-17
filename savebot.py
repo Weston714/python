@@ -6,11 +6,29 @@ import os
 repeat = 0
 while(True):
     print("Hi")
-    time.sleep(5)
+    #time.sleep(5)
     repeat = repeat + 1
     localtime = time.localtime()
-    print(localtime[3])
-    #os.mkdir("data")
+    if localtime[6] == 0:
+        day = "Monday"
+    elif localtime[6] == 1:
+        day = "Tuesday"
+    elif localtime[6] == 2:
+        day = "Wednesday"
+    elif localtime[6] == 3:
+        day = "Thrusday"
+    elif localtime[6] == 4:
+        day = "Friday"
+    elif localtime[6] == 5:
+        day = "Saturday"
+    elif localtime[6] == 6:
+        day = "Sunday"
+
+
+    filename = ("Time" + str(localtime[3]) + ":" + str(localtime[4]) + ":" + str(localtime[5]) + " Date " + day + " " + str(localtime[1]) + "/" + str(localtime[2]) + "/" + str(localtime[0]) + " Julian day " + str(localtime[7]))
+    print(filename)
+    
+    os.mkdir(filename)
     #shutil.copytree(src, dst, symlinks = False, ignore = None, copy_function = copy2, igonre_dangling_symlinks = False)
 
 
