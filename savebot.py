@@ -28,13 +28,12 @@ while(True):
     filename = ("Time" + str(localtime[3]) + ":" + str(localtime[4]) + ":" + str(localtime[5]) + " Date " + day + " " + str(localtime[1]) + "/" + str(localtime[2]) + "/" + str(localtime[0]) + " Julian day " + str(localtime[7]))
     print(filename)
     
-    os.mkdir(filename)
+    name = str(filename)
+    os.mkdir(name)
     #shutil.copytree(src, dst, symlinks = False, ignore = None, copy_function = copy2, igonre_dangling_symlinks = False)
 
 
-    if repeat >= 5:
-        break
-    continue
+    break
 
 
 
