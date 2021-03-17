@@ -25,10 +25,12 @@ while(True):
         day = "Sunday"
 
 
-    filename = ("Time" + str(localtime[3]) + ":" + str(localtime[4]) + ":" + str(localtime[5]) + " Date " + day + " " + str(localtime[1]) + "/" + str(localtime[2]) + "/" + str(localtime[0]) + " Julian day " + str(localtime[7]))
+    filename = str("Time" + str(localtime[3]) + ":" + str(localtime[4]) + ":" + str(localtime[5]) + "Date" + day + str(localtime[1]) + "/" + str(localtime[2]) + "/" + str(localtime[0]) + "Julianday" + str(localtime[7]))
     print(filename)
     
-    name = str(filename)
+    name = str("/workspace/python/" + filename)
+    #directory = os.getcwd()
+    #print(directory)
     os.mkdir(name)
     #shutil.copytree(src, dst, symlinks = False, ignore = None, copy_function = copy2, igonre_dangling_symlinks = False)
 
